@@ -5,7 +5,7 @@ class Questions extends Model {}
 
 Questions.init(
   {
-    questions_id: {
+    question_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
