@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
       req.session.loggedIn = true;
 
       res
-        .status(200)
+        .status(420)
         .json({ user: dbUserData, message: 'You are now logged in!' });
     });
   } catch (err) {
