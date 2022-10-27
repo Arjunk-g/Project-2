@@ -11,6 +11,15 @@ const quizDefinition = {
 }
  
 // this function here takes the object of questions and retunrs the of the users input 
+const quizDefinition = {
+  questions: [
+    { message: 'Hey' },
+    { message: 'What is your name?', answer: {type: 'string', hint: 'Really?', id: 'name'} },
+    { message: 'Buy {{answers.name}}' }
+  ]
+}
+ 
+
 const quiz = new Kwiz(quizDefinition)
   quiz.start()
   .then((reply) => {
@@ -23,7 +32,9 @@ const quiz = new Kwiz(quizDefinition)
     console.log(quiz.getState())
   })
 
+
 // this function here is a if else statment that checks our answers for the question whether it is right or wrong
+
   quiz.addHandler('speed', function (question, answer) {
     var matches = /(\d+) +mph/i.exec(answer)
     return matches 
