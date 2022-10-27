@@ -7,7 +7,7 @@
         if (response.ok) {
           document.location.replace('/');
         } else {
-          alert(`Login failed.`);
+          alert(`Logout failed.`);
         }
       };
       
