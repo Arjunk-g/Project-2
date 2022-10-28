@@ -13,6 +13,10 @@ User.hasMany(HighScores, {
   onDelete: 'CASCADE',
 });
 
+Questions.hasOne(Answer, {
+  foreignKey: 'answer_id',
+  onDelete: 'CASCADE',
+});
 
 HighScores.belongsTo(User, {
   foreignKey: 'user_id',
@@ -25,11 +29,8 @@ Questions.belongsTo(User, {
 Answer.belongsTo(Questions, {
   foreignKey: 'answer_id',
 });
-Questions.hasOne(Answer, {
-  foreignKey: 'answer_id',
-  onDelete: 'CASCADE',
-});
+
 
 
 // We package our two models and export them as an object so we can import them together and use their proper names
-module.exports = { User, HighScores,Questions };
+module.exports = { User, HighScores,Questions,Answer };
