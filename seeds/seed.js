@@ -1,4 +1,4 @@
-const sequelize = require('../config/seedCon.js');
+const sequelize = require(`../config/seedCon`);
 const { User,Questions,Answer,HighScores, } = require('../models/');
 
 
