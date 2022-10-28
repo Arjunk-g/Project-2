@@ -4,6 +4,11 @@ const sequelize = require('./config/connection');
 
 const app = express();
 const PORT = process.env.PORT || 4200;
+// calling handlebars engine
+const handlebars =require('express-handlebars');
+app.set ('view engine','handlebars');
+
+app.use (express.static('public'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
