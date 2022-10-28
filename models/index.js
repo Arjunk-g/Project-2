@@ -1,6 +1,7 @@
 const User = require('./User');
 const HighScores = require('./HighScores');
 const Questions = require('./Questions');
+const Answer = require('./Answer');
 
 User.hasMany(Questions, {
   foreignKey: 'user_id',
@@ -19,6 +20,14 @@ HighScores.belongsTo(User, {
 
 Questions.belongsTo(User, {
   foreignKey: 'user_id',
+});
+
+Answer.belongsTo(Questions, {
+  foreignKey: 'answer_id',
+});
+Questions.hasOne(Answer, {
+  foreignKey: 'answer_id',
+  onDelete: 'CASCADE',
 });
 
 
