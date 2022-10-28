@@ -1,5 +1,0 @@
-[
-    {"message": "What is Quest?", "answer": {"type": "string", "hint": "Same as the last one", "id": "To seek the Holy Grail." }},
-    {"message": "What… is the capital of Assyria?", "answer": {"type": "string", "hint": "I don't know that....", "id": "Assur" }},
-    {"message": "What… is the air-speed velocity of an unladen swallow?", "answer": {"type": "string", "hint": "IDK", "id": "African or European?" }}
-]
