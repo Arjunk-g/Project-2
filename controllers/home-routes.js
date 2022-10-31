@@ -15,8 +15,22 @@ router.get('/login', (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const question = await Questions.findAll({include:Answer});
-    console.log(question);
-    res.render('homepage');
+    const betterQuestion = question.map((element)=>element.get({plain:true}))
+    const finalQuestions = betterQuestion.map((element)=>{
+    return {
+      ans:element.Answer.answer,
+      que:{
+        message:element.message,
+        answer:{
+          type:element.Answer.type,
+          hint:element.Answer.hint,
+          id:`question${element.question_id}`
+        }
+      }
+    }
+    });
+    console.log(finalQuestions);
+    res.render('homepage',{finalQuestions});
   } catch (err) {
     res.status(500).json(err);
   }
