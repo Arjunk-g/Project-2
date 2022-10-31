@@ -1,0 +1,17 @@
+<div>
+    <h2>All Questions</h2>
+
+    {{#if questions.length}}
+    <div>
+        <h3>Current Questions and Answers</h3>
+
+        {{#each questions as |question|}}
+        <div>
+            <h1>{{question.question}}</h1>
+
+            <p>{{question.answer}}</p>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</div>
