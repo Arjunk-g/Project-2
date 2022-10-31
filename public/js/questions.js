@@ -1,10 +1,12 @@
 // this here is the object of questions created for the user to answer
+const Kwiz = require('kwiz');
+
+Kwiz.start;
+
 const quizDefinition = {
     questions: [
-      { message: '' },
-      { message: 'What is your name?', answer: {type: 'string', hint: 'Really?', id: 'name'} },
-      { message: 'Buy {{answers.name}}' },
-      {type: " " },
+      { message: 'What is your name?', answer: {type: 'string', hint: 'Not a number!', id: 'name'} }, 
+      { message: 'What is your name?', answer: {type: 'string', hint: 'Not a number!', id: 'name'} },
     ]
   }
    
