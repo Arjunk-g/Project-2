@@ -1,11 +1,12 @@
-<section class="container">
+<div class="container">
 <h1>Welcome to your Study Tool Guide</h1>
   {{#if loggedIn}}
-  <section class="flex-row justify-center">
-    <h1>HOMEPAGE data</h1>
-  </section>
-</section>
+  <div class="flex-row justify-center">
+    <h1>HOMEPAGE</h1>
+  </div>
 
+<!-- Otherwise, provide a link to login -->
 {{else}}
 <a href="/login">You must login first to view this page</a>
 {{/if}}
+</div>

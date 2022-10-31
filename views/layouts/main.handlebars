@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
   <title>Totally not Quizlet</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -16,21 +15,33 @@
         <a href="/">Totally not Quizlet </a> <br>
       </h1>
       <nav>
+
         <button class="cardCreation" id="cardCreation">Lets Make Some Flashcards!</button>
+
         <button class="directQuiz" id="directQuiz">Try a Quiz!</button>
+        
         <button class="directCards" id="directCards">Check Out Your Cards!<button>
+
+
+
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
+        {{!-- {{#if logged_in}}
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
-        {{/if}}
+        {{/if}} --}}
+      
+      
       </nav>
+
+
     </header>
     <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
+
       {{{ body }}}
+
+
     </main>
     <footer>
       
@@ -41,11 +52,6 @@
 </html>
 
 
-
-
-=======
-  <title>BeeWasHere</title>
-</head>
 
 <body>
   <header>
@@ -66,5 +72,4 @@
   <script src="../../public/js/logout.js"></script>
   {{/if}}
 </body>
-</html>
->>>>>>> 7e94dcd817ff3f7d22aee425f04bb8f47cbd632d
+

@@ -17,3 +17,12 @@ header, .project:not(:last-child) {
     text-decoration: underline;
   }
   
+  .button1 {
+    background-color: #4CAF50;
+    border-radius: 4px;
+  }
+
+  .button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
