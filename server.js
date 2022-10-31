@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // turn on controllers
 app.use(routes);
 
-// turn on connection to db and server
+// turn on the server to the port number
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT,() => console.log(`Example app listening at http://localhost:${PORT}`))
 });
