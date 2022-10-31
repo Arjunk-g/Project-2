@@ -20,7 +20,6 @@ app.use(routes);
 // turn on the server to the port number
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT,() => console.log(`Example app listening at http://localhost:${PORT}`))
-
 });
 
 
@@ -58,4 +57,3 @@ sequelize.sync({ force: false }).then(() => {
 //         console.log(`Example app listening at http://localhost:${PORT}`)
         
 //     })
-// =======
