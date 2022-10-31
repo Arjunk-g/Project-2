@@ -3,6 +3,17 @@ const { findAll } = require('../models/Questions');
 
 const router = require('express').Router();
 
+
+// get all posts for homepage
+router.get('/', async (req, res) => {
+  try {
+    res.render('homepage');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -11,6 +22,26 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+router.get('/create', (req, res) => {
+   res.render('cards');
+});
+
+router.get('/all', async (req, res) => {
+  try {
+    const questionData = await Questions.findAll({
+
+    })
+
+    const questions = questionData.map((question) => question.get({plain: true}));
+
+    res.render('all', {
+      questions
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 router.get('/', async (req, res) => {
   try {
@@ -28,6 +59,7 @@ router.get('/', async (req, res) => {
         }
       }
     }
+  
     });
     console.log(finalQuestions);
     res.render('homepage',{finalQuestions});

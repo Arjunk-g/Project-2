@@ -10,25 +10,14 @@ Questions.init(
       primaryKey: true,
       autoIncrement: true
     },
-    message: {
-      type: DataTypes.STRING
+    question: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
-    answer_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        // This references the `user` model, which we set in `user.js` as its `modelName` property
-        model: 'Answer',
-        key: 'answer_id',
-      },
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        // This references the `user` model, which we set in `user.js` as its `modelName` property
-        model: 'User',
-        key: 'user_id',
-      },
-    },
+   answer: {
+    type: DataTypes.STRING,
+    allowNull: false
+   }
   },
   {
     sequelize,
