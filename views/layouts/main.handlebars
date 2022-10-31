@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
   <title>Totally not Quizlet</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -42,3 +43,28 @@
 
 
 
+=======
+  <title>BeeWasHere</title>
+</head>
+
+<body>
+  <header>
+    <h1>HOMEPAGE</h1>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+  <main>
+    <h1>Body</h1>
+  </main>
+  {{#if loggedIn}}
+  <script src="../../public/js/logout.js"></script>
+  {{/if}}
+</body>
+</html>
+>>>>>>> 7e94dcd817ff3f7d22aee425f04bb8f47cbd632d
