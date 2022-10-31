@@ -9,9 +9,6 @@ const PORT = process.env.PORT || 4200;
 const hbs = exphbs.create({});
 app.set('view engine', 'handlebars');
 app.engine('handlebars', hbs.engine);
-const hbs = exphbs.create({});
-app.set('view engine', 'handlebars');
-app.engine('handlebars', hbs.engine);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
