@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// turn on controllers
+// turn on controller folder
 app.use(routes);
 
 // turn on the server to the port number
