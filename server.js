@@ -12,8 +12,6 @@ const PORT = process.env.PORT || 4200;
 const handlebars =require('express-handlebars');
 app.set ('view engine','handlebars');
 
-app.use (express.static('public'));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
