@@ -15,6 +15,7 @@ const questions = [
   {"question_id":1, "message": "What is your Quest?", "answer_id":1, "user_id":1},
   {"question_id":2, "message": "What… is the capital of Assyria?", "answer_id":2, "user_id":1},
   {"question_id":3, "message": "What is the airspeed velocity of an unlayden swallow?", "answer_id":3, "user_id":1 }
+  
 ];
 const highscores = [
   {"player_score":999, "user_id":1},
