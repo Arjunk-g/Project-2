@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Totally not Quizlet</title>
   <link rel="stylesheet" href="/css/style.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
@@ -16,11 +17,13 @@
       </h1>
       <nav>
 
-        <button class="cardCreation" id="cardCreation">Lets Make Some Flashcards!</button>
+        {{!-- <button class="cardCreation" id="cardCreation">Lets Make Some Flashcards!</button> --}}
+        <a href="/create">Create a Flashcard</a>
+        <a href="/all">See all Questions</a>
 
-        <button class="directQuiz" id="directQuiz">Try a Quiz!</button>
+        {{!-- <button class="directQuiz" id="directQuiz">Try a Quiz!</button> --}}
         
-        <button class="directCards" id="directCards">Check Out Your Cards!<button>
+        {{!-- <button class="directCards" id="directCards">Check Out Your Cards!<button> --}}
 
 
 
@@ -48,11 +51,12 @@
     </footer>
   </div>
 </body>
+<script src="./js/card.js"></script>
 
 </html>
 
 
-
+{{!-- 
 <body>
   <header>
     <h1>HOMEPAGE</h1>
@@ -71,5 +75,5 @@
   {{#if loggedIn}}
   <script src="../../public/js/logout.js"></script>
   {{/if}}
-</body>
+</body> --}}
 
