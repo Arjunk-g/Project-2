@@ -1,4 +1,4 @@
-const sequelize = require(`../config/seedCon`);
+const sequelize = require(`../config/connection.js`);
 const { User,Questions,Answer,HighScores, } = require('../models/');
 
 
@@ -26,14 +26,15 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-  await Questions.bulkCreate(questions, {
-    individualHooks: true,
-    returning: true,
-  });
   await Answer.bulkCreate(answer, {
     individualHooks: true,
     returning: true,
   });
+  await Questions.bulkCreate(questions, {
+    individualHooks: true,
+    returning: true,
+  });
+ 
   await HighScores.bulkCreate(highscores, {
     individualHooks: true,
     returning: true,
