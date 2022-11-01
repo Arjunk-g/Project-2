@@ -26,3 +26,16 @@ header, .project:not(:last-child) {
     background-color: #4CAF50; /* Green */
     color: white;
   }
+
+.background {
+margin-top: 200px;
+};
+.back {
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+
+
