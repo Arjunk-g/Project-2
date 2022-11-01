@@ -49,6 +49,8 @@ sequelize.sync({ force: false }).then(() => {
 
 
 
+
+
 // Arjun's comments
 // const controllers = require('./controllers');
 // // const sequelize = require('./config/connection');
@@ -79,3 +81,4 @@ sequelize.sync({ force: false }).then(() => {
         
 //     })
 // =======
+
